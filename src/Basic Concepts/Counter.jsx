@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import CounterDisplay from "./CounterDisplay"
 
 /* eslint-disable react/prop-types */
@@ -15,6 +15,8 @@ export default function Counter({ initialValue=0, inc=1 }) {
     function handleReset() {
         setCount(initialValue)
     }
+
+    useEffect(() => console.log(`The counter amount is ${count}.`), [count])
 
     return (
     <>
