@@ -5,7 +5,7 @@ export default function Welcome({ name="John", age=29 }) {
 
     return (
     <>
-    <p>Welcome. {name}!</p>
+    <p>Welcome, {name}!</p>
     <Age age={age} />
     {age>=18 && <Age age={age} />}
     {age && <Age age={age} />}
